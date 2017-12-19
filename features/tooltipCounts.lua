@@ -21,7 +21,7 @@ local function FormatCounts(color, ...)
 	local total = 0
 	local text = ''
 
-	for i = 1, select('#', ...) - (Addon.sets.countGuild and 1 or 0) do
+	for i = 1, select('#', ...) - (Addon.sets.countGuild and 0 or 1) do
 		local count = select(i, ...)
 		if count > 0 then
 			text = text .. L.TipDelimiter .. L['TipCount' .. i]:format(count)
